@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="[post]-markdown解決方案" class="article article-type-[post]" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/04/12/markdown解決方案/" class="article-date">
+  <time datetime="2018-04-12T07:46:36.000Z" itemprop="datePublished">2018-04-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/12/markdown解決方案/">markdown解決方案</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Markdown解決方案"><a href="#Markdown解決方案" class="headerlink" title="Markdown解決方案"></a>Markdown解決方案</h1><p>為了記錄自己的學習歷程，以及建立一些筆記，一直在尋求良好Markdown寫作環境，後來還是發覺Visual Studio Code最上手，但還是碰到了諸多問題，用了許多時間解決，希望可以幫助各位</p>
+<p>MARKDOWN寫作用途與需求</p>
+<ul>
+<li>因為主力是資料科學相關，所以要可以支援程式碼高亮與數學公式</li>
+<li>正確轉成PDF</li>
+<li>可以跨平台觀看</li>
+</ul>
+<hr>
+<h2 id="問題1：手機裝置不支援latex等數學公式"><a href="#問題1：手機裝置不支援latex等數學公式" class="headerlink" title="問題1：手機裝置不支援latex等數學公式"></a>問題1：手機裝置不支援latex等數學公式</h2><p>我找了很久，在ios上幾乎沒有支持latex的markdown閱讀器，byword、1writer都試過了，後來發覺一個妙招</p>
+<p>在md文檔前面加入</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span></span></span><br><span class="line"><span class="tag"><span class="attr">type</span>=<span class="string">"text/javascript"</span></span></span><br><span class="line"><span class="tag"><span class="attr">src</span>=<span class="string">"http://cdn.mathjax.org/</span></span></span><br><span class="line"><span class="tag"><span class="string">mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>1writer的Preview竟然就可以神奇的顯示數學公式，後來發覺可能是因為有支援html，才可以直接調用Mathjax的函式庫</p>
+<p>不用擔心，這些程式碼在Markdown Preview的時候也不會被顯示出來</p>
+<p>本人還滿推薦這個app，只要150元，介面也很簡明</p>
+<hr>
+<h2 id="問題2：MD轉PDF的困難"><a href="#問題2：MD轉PDF的困難" class="headerlink" title="問題2：MD轉PDF的困難"></a>問題2：MD轉PDF的困難</h2><p>有時候不是人人都有MD，還是有要轉成PDF的需求</p>
+<p>VSC有一個Markdown PDF的套件可以使用，不過我覺得這個套件對於中文的支援不太好（轉出來不太好看），數學公式的顯示依然失效，會變回原本的</p>
+<p>這時候就要出動Pandoc了，這又是神奇的工具，各種文件類型可以透過這個東西互轉，推薦使用homebrew來安裝</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install pandoc</span><br></pre></td></tr></table></figure>
+<p>接著還需要安裝Mac上latex的相關套件，有兩個解決方案，一個是Mactex，一個是BasicTex</p>
+<p>前者很完整，但是超級肥大（破2G），後者不到100mb，Pandoc官方是建議裝basictex然後再安裝需要的，但是Mactex的官網中Basictex的載點卻死去了，所以再次感恩讚嘆homebrew</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew cask install basictex</span><br></pre></td></tr></table></figure>
+<p>接著請將basictex的路徑加入環境變數</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pdftex</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="string">"/Library/TeX/texbin/:<span class="variable">$PATH</span>"</span></span><br></pre></td></tr></table></figure>
+<p>問題還沒解決呢！Pandoc建議我們安裝一些必要套件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo tlmgr install collection-fontsrecommended</span><br></pre></td></tr></table></figure>
+<p>好啦，那我們來試著把Markdown轉成PDF吧<br>先嘗試看看</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pandoc test.md -o test.pdf</span><br></pre></td></tr></table></figure>
+<p>然後就會出現以下訊息</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">! Package inputenc Error: Unicode char 解 (U+89E3)</span><br><span class="line">(inputenc)                not <span class="built_in">set</span> up <span class="keyword">for</span> use with LaTeX.</span><br></pre></td></tr></table></figure>
+<p>查很久才發現latex不支持中文，所以要改用xelatex，並且要調用中文字型</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pandoc --pdf-engine=xelatex </span><br><span class="line">CJKmainfont=<span class="string">"STSongti-TC-Light"</span> test.md -o test.pdf</span><br></pre></td></tr></table></figure>
+<p>想要加上程式碼區塊的背景，改成這樣即可</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pandoc --pdf-engine=xelatex --highlight-style zenburn</span><br><span class="line">-V CJKmainfont=<span class="string">"STSongti-TC-Light"</span> test.md -o test.pdf</span><br></pre></td></tr></table></figure>
+<p>調用Mac上的中文字形，這樣就可以正確轉出來了，至於怎麼正確指定字型，可以在字體簿查PostScript 名稱（這個也查超久，天啊）</p>
+<p><img src="https://i.imgur.com/87JWGuj.png" alt="img"></p>
+<p>如果報錯說<code>! LaTeX Error: File &#39;sometihng.sty&#39; not found.</code></p>
+<p>只要就去CTAN找一下他是什麼套件，然後<code>sudo tlmgr install yourpackage</code>就好了，<code>yourpackage</code>是你要裝的套件</p>
+<p>但是在vsc如果邊開MD預覽邊用中文打，可能會有一點小bug，會出現奇怪的空白字元導致pdf沒有辦法轉</p>
+<p>到vsc設定改<code>&quot;editor.renderControlCharacters&quot;: true</code> 這樣奇怪的字元會直接顯示出來，把它刪掉即可</p>
+<hr>
+<h2 id="VCS快速轉PDF"><a href="#VCS快速轉PDF" class="headerlink" title="VCS快速轉PDF"></a>VCS快速轉PDF</h2><p>如果只有一般需求的話，那VSC裡面的<code>Markdown PDF</code>就可以快速完成MD轉pdf的工作，但是我們辛辛苦苦建立的pandoc，也是可以用在VSC裡面</p>
+<p><code>vs-pandoc</code>可以讓我們很方便的在VSC利用pandoc轉檔，裝好插件之後到使用者設定更改我們要的參數</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"pandoc.pdfOptString"</span>:<span class="string">"--pdf-engine=xelatex --highlight-style tango</span></span><br><span class="line"><span class="string"> -V CJKmainfont=STSongti-TC-Light"</span></span><br></pre></td></tr></table></figure>
+<p>就跟剛剛的設定差不多，這樣VSC會自動調用這些設定來幫你轉檔，然後只要按<code>cmd + shift + P</code>然後打pandoc，出現<code>pandoc render</code> 選PDF就可以輕鬆轉成PDF</p>
+<h2 id="公式另外的解決方案"><a href="#公式另外的解決方案" class="headerlink" title="公式另外的解決方案"></a>公式另外的解決方案</h2><p>只要在這個API打上latex公式，會自動幫你生成公式的png，超棒的！<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://latex.codecogs.com/gif.latex?x=1</span><br></pre></td></tr></table></figure></p>
+<p>or google chart</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://chart.apis.google.com/chart?cht=tx&amp;chl=m_0c^2</span><br></pre></td></tr></table></figure>
+<p>就像這樣</p>
+<p><img src="http://latex.codecogs.com/gif.latex?x=1" alt="eq"></p>
+<p><img src="http://chart.apis.google.com/chart?cht=tx&amp;chl=m_0c^2" alt="eq"></p>
+<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>連假搞了那麼久，終於搞好了<br>如果不想搞得這麼囉哩八唆，那typora也是很棒的選擇</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/04/12/markdown解決方案/" data-id="cjfw81thx0000rzzlb9itkblf" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="[layout]-your-article-title" class="article article-type-[layout]" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/04/12/your-article-title/" class="article-date">
+  <time datetime="2018-04-12T07:43:58.000Z" itemprop="datePublished">2018-04-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/12/your-article-title/">your-article-title</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/04/12/your-article-title/" data-id="cjfw81ti20001rzzl4r8k8dn1" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/04/12/hello-world/" class="article-date">
+  <time datetime="2018-04-12T07:42:01.000Z" itemprop="datePublished">2018-04-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/12/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/04/12/hello-world/" data-id="cjfw81ti60002rzzl0mbeqf0t" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/04/12/markdown解決方案/">markdown解決方案</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/12/your-article-title/">your-article-title</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/12/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

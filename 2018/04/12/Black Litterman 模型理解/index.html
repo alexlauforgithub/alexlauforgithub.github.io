@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="資產配置,Black Litterman," />
 
 
 
@@ -79,13 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="哈瑪星人的程式銀河">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="Black Litterman 模型理解核心概念傳統馬克維茲M-V的缺點  預期收益難以估計，要求每個資產要有具體與準確的預期收益假定 預期收益估計的變動對投組權重影響非常大 傳統模型無法區分不同可信度的觀點 無條件限制下，有些資產會強烈賣空，有些強烈做多  B-L模型的核心思想  結合多個資產的先驗分佈（貝葉斯方法）與投資者主觀判斷   欲最佳化的模型估算式$$maxE[R]={[{ (\tau">
+<meta name="keywords" content="資產配置,Black Litterman">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Blacl Litterman 模型理解">
+<meta property="og:url" content="http://yoursite.com/2018/04/12/Black Litterman 模型理解/index.html">
 <meta property="og:site_name" content="哈瑪星人的程式銀河">
+<meta property="og:description" content="Black Litterman 模型理解核心概念傳統馬克維茲M-V的缺點  預期收益難以估計，要求每個資產要有具體與準確的預期收益假定 預期收益估計的變動對投組權重影響非常大 傳統模型無法區分不同可信度的觀點 無條件限制下，有些資產會強烈賣空，有些強烈做多  B-L模型的核心思想  結合多個資產的先驗分佈（貝葉斯方法）與投資者主觀判斷   欲最佳化的模型估算式$$maxE[R]={[{ (\tau">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-04-12T12:56:51.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="哈瑪星人的程式銀河">
+<meta name="twitter:title" content="Blacl Litterman 模型理解">
+<meta name="twitter:description" content="Black Litterman 模型理解核心概念傳統馬克維茲M-V的缺點  預期收益難以估計，要求每個資產要有具體與準確的預期收益假定 預期收益估計的變動對投組權重影響非常大 傳統模型無法區分不同可信度的觀點 無條件限制下，有些資產會強烈賣空，有些強烈做多  B-L模型的核心思想  結合多個資產的先驗分佈（貝葉斯方法）與投資者主觀判斷   欲最佳化的模型估算式$$maxE[R]={[{ (\tau">
 
 
 
@@ -115,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/12/Black Litterman 模型理解/"/>
 
 
 
 
 
-  <title>哈瑪星人的程式銀河</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>Blacl Litterman 模型理解 | 哈瑪星人的程式銀河</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -140,8 +145,7 @@
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left 
-  page-home">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -244,9 +248,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -276,9 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/12/Black Litterman 模型理解/" itemprop="url">Blacl Litterman 模型理解</a></h1>
+          <h1 class="post-title" itemprop="name headline">Blacl Litterman 模型理解</h1>
         
 
         <div class="post-meta">
@@ -361,9 +363,7 @@
       
 
       
-        
-          
-            <h1 id="Black-Litterman-模型理解"><a href="#Black-Litterman-模型理解" class="headerlink" title="Black Litterman 模型理解"></a>Black Litterman 模型理解</h1><h2 id="核心概念"><a href="#核心概念" class="headerlink" title="核心概念"></a>核心概念</h2><p>傳統馬克維茲M-V的缺點</p>
+        <h1 id="Black-Litterman-模型理解"><a href="#Black-Litterman-模型理解" class="headerlink" title="Black Litterman 模型理解"></a>Black Litterman 模型理解</h1><h2 id="核心概念"><a href="#核心概念" class="headerlink" title="核心概念"></a>核心概念</h2><p>傳統馬克維茲M-V的缺點</p>
 <ul>
 <li>預期收益難以估計，要求每個資產要有具體與準確的預期收益假定</li>
 <li>預期收益估計的變動對投組權重影響非常大</li>
@@ -409,8 +409,6 @@
 <li>達里奧橋水基金的全球配置更關注風險因子，而非大類。股票中的能源股和部分大宗商品息息相關，從而分配到相同的一類中。是不同於MPT和BL的資產配置理論</li>
 </ul>
 
-          
-        
       
     </div>
     
@@ -425,220 +423,38 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/12/markdown解決方案/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Alex Lau">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="哈瑪星人的程式銀河">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/12/markdown解決方案/" itemprop="url">markdown解決方案</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-12T15:46:36+08:00">
-                2018-04-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/程式相關/" itemprop="url" rel="index">
-                    <span itemprop="name">程式相關</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/程式相關/其他/" itemprop="url" rel="index">
-                    <span itemprop="name">其他</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/資產配置/" rel="tag"># 資產配置</a>
           
-
+            <a href="/tags/Black-Litterman/" rel="tag"># Black Litterman</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Markdown解決方案"><a href="#Markdown解決方案" class="headerlink" title="Markdown解決方案"></a>Markdown解決方案</h1><p>為了記錄自己的學習歷程，以及建立一些筆記，一直在尋求良好Markdown寫作環境，後來還是發覺Visual Studio Code最上手，但還是碰到了諸多問題且花許多時間解決，希望可以幫助各位</p>
-<p>MARKDOWN寫作用途與需求</p>
-<ul>
-<li>因為主力是資料科學相關，所以要可以支援程式碼高亮與數學公式</li>
-<li>正確轉成PDF</li>
-<li>可以跨平台觀看</li>
-</ul>
-<hr>
-<h2 id="問題1：手機裝置不支援latex等數學公式"><a href="#問題1：手機裝置不支援latex等數學公式" class="headerlink" title="問題1：手機裝置不支援latex等數學公式"></a>問題1：手機裝置不支援latex等數學公式</h2><p>我找了很久，在ios上幾乎沒有支持latex的markdown閱讀器，byword、1writer都試過了，後來發覺一個妙招</p>
-<p>在md文檔前面加入</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span></span></span><br><span class="line"><span class="tag"><span class="attr">type</span>=<span class="string">"text/javascript"</span></span></span><br><span class="line"><span class="tag"><span class="attr">src</span>=<span class="string">"http://cdn.mathjax.org/</span></span></span><br><span class="line"><span class="tag"><span class="string">mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>1writer的Preview竟然就可以神奇的顯示數學公式，後來發覺可能是因為有支援html，才可以直接調用Mathjax的函式庫</p>
-<p>不用擔心，這些程式碼在Markdown Preview的時候也不會被顯示出來</p>
-<p>本人還滿推薦這個app，只要150元，介面也很簡明</p>
-<hr>
-<h2 id="問題2：MD轉PDF的困難"><a href="#問題2：MD轉PDF的困難" class="headerlink" title="問題2：MD轉PDF的困難"></a>問題2：MD轉PDF的困難</h2><p>有時候不是人人都有MD，還是有要轉成PDF的需求</p>
-<p>VSC有一個Markdown PDF的套件可以使用，不過我覺得這個套件對於中文的支援不太好（轉出來不太好看），數學公式的顯示依然失效，會變回原本的</p>
-<p>這時候就要出動Pandoc了，這又是神奇的工具，各種文件類型可以透過這個東西互轉，推薦使用homebrew來安裝</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install pandoc</span><br></pre></td></tr></table></figure>
-<p>接著還需要安裝Mac上latex的相關套件，有兩個解決方案，一個是Mactex，一個是BasicTex</p>
-<p>前者很完整，但是超級肥大（破2G），後者不到100mb，Pandoc官方是建議裝basictex然後再安裝需要的，但是Mactex的官網中Basictex的載點卻死去了，所以再次感恩讚嘆homebrew</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew cask install basictex</span><br></pre></td></tr></table></figure>
-<p>接著請將basictex的路徑加入環境變數</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pdftex</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="string">"/Library/TeX/texbin/:<span class="variable">$PATH</span>"</span></span><br></pre></td></tr></table></figure>
-<p>問題還沒解決呢！Pandoc建議我們安裝一些必要套件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo tlmgr install collection-fontsrecommended</span><br></pre></td></tr></table></figure>
-<p>好啦，那我們來試著把Markdown轉成PDF吧<br>先嘗試看看</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pandoc test.md -o test.pdf</span><br></pre></td></tr></table></figure>
-<p>然後就會出現以下訊息</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">! Package inputenc Error: Unicode char 解 (U+89E3)</span><br><span class="line">(inputenc)                not <span class="built_in">set</span> up <span class="keyword">for</span> use with LaTeX.</span><br></pre></td></tr></table></figure>
-<p>查很久才發現latex不支持中文，所以要改用xelatex，並且要調用中文字型</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pandoc --pdf-engine=xelatex </span><br><span class="line">CJKmainfont=<span class="string">"STSongti-TC-Light"</span> test.md -o test.pdf</span><br></pre></td></tr></table></figure>
-<p>想要加上程式碼區塊的背景，改成這樣即可</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pandoc --pdf-engine=xelatex --highlight-style zenburn</span><br><span class="line">-V CJKmainfont=<span class="string">"STSongti-TC-Light"</span> test.md -o test.pdf</span><br></pre></td></tr></table></figure>
-<p>調用Mac上的中文字形，這樣就可以正確轉出來了，至於怎麼正確指定字型，可以在字體簿查PostScript 名稱（這個也查超久，天啊）</p>
-<p><img src="https://i.imgur.com/87JWGuj.png" alt="img"></p>
-<p>如果報錯說<code>! LaTeX Error: File &#39;sometihng.sty&#39; not found.</code></p>
-<p>只要就去CTAN找一下他是什麼套件，然後<code>sudo tlmgr install yourpackage</code>就好了，<code>yourpackage</code>是你要裝的套件</p>
-<p>但是在vsc如果邊開MD預覽邊用中文打，可能會有一點小bug，會出現奇怪的空白字元導致pdf沒有辦法轉</p>
-<p>到vsc設定改<code>&quot;editor.renderControlCharacters&quot;: true</code> 這樣奇怪的字元會直接顯示出來，把它刪掉即可</p>
-<hr>
-<h2 id="VCS快速轉PDF"><a href="#VCS快速轉PDF" class="headerlink" title="VCS快速轉PDF"></a>VCS快速轉PDF</h2><p>如果只有一般需求的話，那VSC裡面的<code>Markdown PDF</code>就可以快速完成MD轉pdf的工作，但是我們辛辛苦苦建立的pandoc，也是可以用在VSC裡面</p>
-<p><code>vs-pandoc</code>可以讓我們很方便的在VSC利用pandoc轉檔，裝好插件之後到使用者設定更改我們要的參數</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"pandoc.pdfOptString"</span>:<span class="string">"--pdf-engine=xelatex --highlight-style tango</span></span><br><span class="line"><span class="string"> -V CJKmainfont=STSongti-TC-Light"</span></span><br></pre></td></tr></table></figure>
-<p>就跟剛剛的設定差不多，這樣VSC會自動調用這些設定來幫你轉檔，然後只要按<code>cmd + shift + P</code>然後打pandoc，出現<code>pandoc render</code> 選PDF就可以輕鬆轉成PDF</p>
-<h2 id="公式另外的解決方案"><a href="#公式另外的解決方案" class="headerlink" title="公式另外的解決方案"></a>公式另外的解決方案</h2><p>只要在這個API打上latex公式，會自動幫你生成公式的png，超棒的！<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://latex.codecogs.com/gif.latex?x=1</span><br></pre></td></tr></table></figure></p>
-<p>or google chart</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://chart.apis.google.com/chart?cht=tx&amp;chl=m_0c^2</span><br></pre></td></tr></table></figure>
-<p>就像這樣</p>
-<p><img src="http://latex.codecogs.com/gif.latex?x=1" alt="eq"></p>
-<p><img src="http://chart.apis.google.com/chart?cht=tx&amp;chl=m_0c^2" alt="eq"></p>
-<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>連假搞了那麼久，終於搞好了<br>如果不想搞得這麼囉哩八唆，那typora也是很棒的選擇</p>
-<p>行內公式 $ x=1 $</p>
-<p>$$x=1$$</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/04/12/markdown解決方案/" rel="next" title="markdown解決方案">
+                <i class="fa fa-chevron-left"></i> markdown解決方案
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
       
     </footer>
   </div>
@@ -648,10 +464,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -659,6 +476,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -679,8 +500,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -740,6 +570,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Black-Litterman-模型理解"><span class="nav-number">1.</span> <span class="nav-text">Black Litterman 模型理解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#核心概念"><span class="nav-number">1.1.</span> <span class="nav-text">核心概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#欲最佳化的模型估算式"><span class="nav-number">1.2.</span> <span class="nav-text">欲最佳化的模型估算式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#那實際情況是如何使用的？"><span class="nav-number">1.3.</span> <span class="nav-text">那實際情況是如何使用的？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PQ矩陣舉例"><span class="nav-number">1.4.</span> <span class="nav-text">PQ矩陣舉例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他Notes"><span class="nav-number">1.5.</span> <span class="nav-text">其他Notes</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -873,6 +719,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 

@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="資產配置,Black Litterman," />
+  <meta name="keywords" content="程式,Python,Pandas," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Black Litterman 模型理解此文非本人原創，內容摘錄自【量化模型】Black-Litterman模型介绍作為個人筆記使用 核心概念傳統馬克維茲M-V的缺點  預期收益難以估計，要求每個資產要有具體與準確的預期收益假定 預期收益估計的變動對投組權重影響非常大 傳統模型無法區分不同可信度的觀點 無條件限制下，有些資產會強烈賣空，有些強烈做多  B-L模型的核心思想  結合多個資產的先驗分佈">
-<meta name="keywords" content="資產配置,Black Litterman">
+<meta name="description" content="Pandas 學習筆記（一）concat與merge前言筆者平常比較習慣熟悉R的操作，不過近日覺得scikit learn真的太好用了，想要逐漸將開發重心慢慢轉往python。但是這件事不太可能一蹴可幾，將R語言裡平常慣用的數據清洗手法，思考怎麼在python實現，這可能是比較好的做法。 雖然不能百分百完全移植，因為不同語言有不同的架構思維，但是基本的功能應是可行的。 data frame整體處理">
+<meta name="keywords" content="程式,Python,Pandas">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Blacl Litterman 模型理解">
-<meta property="og:url" content="http://yoursite.com/2018/04/12/Black Litterman 模型理解/index.html">
+<meta property="og:title" content="Pandas 學習筆記（一）concat與merge">
+<meta property="og:url" content="http://yoursite.com/2018/04/18/Pandas 學習筆記（一）concat與merge/index.html">
 <meta property="og:site_name" content="哈瑪星人的程式銀河">
-<meta property="og:description" content="Black Litterman 模型理解此文非本人原創，內容摘錄自【量化模型】Black-Litterman模型介绍作為個人筆記使用 核心概念傳統馬克維茲M-V的缺點  預期收益難以估計，要求每個資產要有具體與準確的預期收益假定 預期收益估計的變動對投組權重影響非常大 傳統模型無法區分不同可信度的觀點 無條件限制下，有些資產會強烈賣空，有些強烈做多  B-L模型的核心思想  結合多個資產的先驗分佈">
+<meta property="og:description" content="Pandas 學習筆記（一）concat與merge前言筆者平常比較習慣熟悉R的操作，不過近日覺得scikit learn真的太好用了，想要逐漸將開發重心慢慢轉往python。但是這件事不太可能一蹴可幾，將R語言裡平常慣用的數據清洗手法，思考怎麼在python實現，這可能是比較好的做法。 雖然不能百分百完全移植，因為不同語言有不同的架構思維，但是基本的功能應是可行的。 data frame整體處理">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-13T10:23:18.000Z">
+<meta property="og:updated_time" content="2018-04-18T07:47:40.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Blacl Litterman 模型理解">
-<meta name="twitter:description" content="Black Litterman 模型理解此文非本人原創，內容摘錄自【量化模型】Black-Litterman模型介绍作為個人筆記使用 核心概念傳統馬克維茲M-V的缺點  預期收益難以估計，要求每個資產要有具體與準確的預期收益假定 預期收益估計的變動對投組權重影響非常大 傳統模型無法區分不同可信度的觀點 無條件限制下，有些資產會強烈賣空，有些強烈做多  B-L模型的核心思想  結合多個資產的先驗分佈">
+<meta name="twitter:title" content="Pandas 學習筆記（一）concat與merge">
+<meta name="twitter:description" content="Pandas 學習筆記（一）concat與merge前言筆者平常比較習慣熟悉R的操作，不過近日覺得scikit learn真的太好用了，想要逐漸將開發重心慢慢轉往python。但是這件事不太可能一蹴可幾，將R語言裡平常慣用的數據清洗手法，思考怎麼在python實現，這可能是比較好的做法。 雖然不能百分百完全移植，因為不同語言有不同的架構思維，但是基本的功能應是可行的。 data frame整體處理">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/04/12/Black Litterman 模型理解/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/18/Pandas 學習筆記（一）concat與merge/"/>
 
 
 
 
 
-  <title>Blacl Litterman 模型理解 | 哈瑪星人的程式銀河</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>Pandas 學習筆記（一）concat與merge | 哈瑪星人的程式銀河</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -297,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/12/Black Litterman 模型理解/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/18/Pandas 學習筆記（一）concat與merge/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Alex Lau">
@@ -314,7 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Blacl Litterman 模型理解</h1>
+          <h1 class="post-title" itemprop="name headline">Pandas 學習筆記（一）concat與merge</h1>
         
 
         <div class="post-meta">
@@ -326,8 +326,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-12T20:42:36+08:00">
-                2018-04-12
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-18T15:39:16+08:00">
+                2018-04-18
               </time>
             
 
@@ -349,8 +349,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/投資相關/" itemprop="url" rel="index">
-                    <span itemprop="name">投資相關</span>
+                  <a href="/categories/程式相關/" itemprop="url" rel="index">
+                    <span itemprop="name">程式相關</span>
                   </a>
                 </span>
 
@@ -360,8 +360,19 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/投資相關/量化、計量、因子/" itemprop="url" rel="index">
-                    <span itemprop="name">量化、計量、因子</span>
+                  <a href="/categories/程式相關/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/程式相關/Python/Pandas/" itemprop="url" rel="index">
+                    <span itemprop="name">Pandas</span>
                   </a>
                 </span>
 
@@ -397,53 +408,147 @@
       
 
       
-        <h1 id="Black-Litterman-模型理解"><a href="#Black-Litterman-模型理解" class="headerlink" title="Black Litterman 模型理解"></a>Black Litterman 模型理解</h1><p>此文非本人原創，內容摘錄自<a href="https://zhuanlan.zhihu.com/p/25041459" target="_blank" rel="noopener">【量化模型】Black-Litterman模型介绍</a>作為個人筆記使用</p>
-<h2 id="核心概念"><a href="#核心概念" class="headerlink" title="核心概念"></a>核心概念</h2><p>傳統馬克維茲M-V的缺點</p>
+        <h1 id="Pandas-學習筆記（一）concat與merge"><a href="#Pandas-學習筆記（一）concat與merge" class="headerlink" title="Pandas 學習筆記（一）concat與merge"></a>Pandas 學習筆記（一）concat與merge</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>筆者平常比較習慣熟悉R的操作，不過近日覺得scikit learn真的太好用了，想要逐漸將開發重心慢慢轉往python。但是這件事不太可能一蹴可幾，將R語言裡平常慣用的數據清洗手法，思考怎麼在python實現，這可能是比較好的做法。</p>
+<p>雖然不能百分百完全移植，因為不同語言有不同的架構思維，但是基本的功能應是可行的。</p>
+<h2 id="data-frame整體處理"><a href="#data-frame整體處理" class="headerlink" title="data frame整體處理"></a>data frame整體處理</h2><p>我們想實現類似R的幾種功能，以下將紀錄R與python對應的實現方式</p>
 <ul>
-<li>預期收益難以估計，要求每個資產要有具體與準確的預期收益假定</li>
-<li>預期收益估計的變動對投組權重影響非常大</li>
-<li>傳統模型無法區分不同可信度的觀點</li>
-<li>無條件限制下，有些資產會強烈賣空，有些強烈做多</li>
-</ul>
-<p>B-L模型的核心思想</p>
-<ul>
-<li>結合多個資產的先驗分佈（貝葉斯方法）與投資者主觀判斷</li>
+<li>rbind</li>
+<li>cbind</li>
+<li>left_join、right_join、inner_join</li>
 </ul>
 <a id="more"></a>
-<hr>
-<h2 id="欲最佳化的模型估算式"><a href="#欲最佳化的模型估算式" class="headerlink" title="欲最佳化的模型估算式"></a>欲最佳化的模型估算式</h2><p>$$maxE[R]={[{ (\tau \Sigma ) }^{ -1 }+{ P }^{ T }{ \Omega  }^{ -1 }P]}^{-1}  [{ (\tau \Sigma ) }^{ -1 }\Pi+{ P }^{ T }{ \Omega  }^{ -1 }Q]$$</p>
-<p>$\tau$：比例系數（常數）</p>
-<p>$P$：涉及主觀看法資產矩陣</p>
-<p>$\Omega$：看法置信度矩陣</p>
-<p>$\Pi$：隱含均衡收益率向量</p>
-<p>$Q$：看法向量</p>
-<hr>
-<h2 id="那實際情況是如何使用的？"><a href="#那實際情況是如何使用的？" class="headerlink" title="那實際情況是如何使用的？"></a>那實際情況是如何使用的？</h2><ul>
-<li>從市場觀察到的價格、市值權重去反推出市場隱含均衡收益率（市場均衡配置）$\Pi=\delta\Sigma{W}^{m}$</li>
-<li>根據Satchell and Scowcroft(2000)的方法，單位風險的超額收益表示為$\delta=(E(r)-{r}_{f})/{\sigma}^{2}$</li>
-<li>Σ是變異數矩陣</li>
-<li>根據Litterman的文獻$\Omega=diag(P(\tau\Sigma){P}^{T})$</li>
-<li>假定接近於零，實際取0.05，此值越小預期收益越遠離歷史情况，接近主觀预期；或者可以用K/N計算，K為有主觀分析的種類數，N為總種類數。</li>
-</ul>
-<hr>
-<h2 id="PQ矩陣舉例"><a href="#PQ矩陣舉例" class="headerlink" title="PQ矩陣舉例"></a>PQ矩陣舉例</h2><p>P、Q舉例如下： P是涉及看法的資產矩陣，是k×n矩陣，k表示幾種看法，n表示資產數量。採用Satchell and Scowcroft（2000 方法，具體構造以下三個看法來例舉闡述。</p>
-<ul>
-<li>A資產絶對收益為10%，信心水平50%</li>
-<li>B資產比C資產收益率高5%，信心水平60%</li>
-<li>D、E資產比F、G、H資產收益高2%，信心水平90%</li>
-</ul>
-<p>假定資產數量為10個，A、B、C、D、E、F、G、H依次排序為前八個，則P矩陣如下：</p>
-<p>$$\begin{bmatrix} 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; -1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 1/2 &amp; 1/2 &amp; -1/3 &amp; -1/3 &amp; -1/3 &amp; 0 &amp; 0 \end{bmatrix}$$<br>第一列代表第一個看法，這是一種絶對方式表達，涉及A資產，看法正面為1。第二列是相對看法， 涉及A、B兩資產，看法正面為1；負面為-1。第三列涉及多個資產，看法為正面的之各為1；看法為 負面的之和為-1</p>
-<p>Q矩陣： 看法（views）數量k=3，列向量為(10% , 5% , 2%)的轉置</p>
-<hr>
-<h2 id="其他Notes"><a href="#其他Notes" class="headerlink" title="其他Notes"></a>其他Notes</h2><ul>
-<li>BL優化後確實戰勝市場均衡配置</li>
-<li>BL模型同樣也存在模型上的缺陷，需要繼續改進。歷史數據計算出來的協方差矩陣在長期內可能不能良好刻畫出短期關係，需要動態調整</li>
-<li>分析師主觀預期（看法）信心水平的設定具有很大的主觀隨意性，在方法上還存在眾多分歧</li>
-<li>BL模型比較符合目前基金投資真實市場環境，如關注分析師主觀預期，存在投資倉位上下限規定等</li>
-<li>BL模型適用於行業資產配置，而一般不配置具體的投資，傾向區分大類資產；但有的地方也說可以用在個股組合中；</li>
-<li>達里奧橋水基金的全球配置更關注風險因子，而非大類。股票中的能源股和部分大宗商品息息相關，從而分配到相同的一類中。是不同於MPT和BL的資產配置理論</li>
-</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">df1 = pd.DataFrame(np.ones((<span class="number">3</span>,<span class="number">4</span>))*<span class="number">0</span>, columns=[<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>],index=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</span><br><span class="line">df2 = pd.DataFrame(np.ones((<span class="number">3</span>,<span class="number">4</span>))*<span class="number">1</span>, columns=[<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>],index=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</span><br><span class="line">df3 = pd.DataFrame(np.ones((<span class="number">3</span>,<span class="number">4</span>))*<span class="number">2</span>, columns=[<span class="string">'c'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>,<span class="string">'f'</span>],index=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</span><br><span class="line">df4 = pd.DataFrame(np.ones((<span class="number">3</span>,<span class="number">4</span>))*<span class="number">2</span>, columns=[<span class="string">'c'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>,<span class="string">'f'</span>],index=[<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>])</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(df1)</span><br></pre></td></tr></table></figure>
+<pre><code>     a    b    c    d
+1  0.0  0.0  0.0  0.0
+2  0.0  0.0  0.0  0.0
+3  0.0  0.0  0.0  0.0
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(df2)</span><br></pre></td></tr></table></figure>
+<pre><code>     a    b    c    d
+1  1.0  1.0  1.0  1.0
+2  1.0  1.0  1.0  1.0
+3  1.0  1.0  1.0  1.0
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(df3)</span><br></pre></td></tr></table></figure>
+<pre><code>     c    d    e    f
+1  2.0  2.0  2.0  2.0
+2  2.0  2.0  2.0  2.0
+3  2.0  2.0  2.0  2.0
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(df4)</span><br></pre></td></tr></table></figure>
+<pre><code>     c    d    e    f
+2  2.0  2.0  2.0  2.0
+3  2.0  2.0  2.0  2.0
+5  2.0  2.0  2.0  2.0
+</code></pre><h3 id="cbind、rbind的實現：pd-concat"><a href="#cbind、rbind的實現：pd-concat" class="headerlink" title="cbind、rbind的實現：pd.concat"></a>cbind、rbind的實現：pd.concat</h3><p><code>concat</code> 設定 <code>axis=0</code> 為直向合併，<code>axis=1</code> 為橫向合併</p>
+<p><code>DataFrame.append()</code>類似於<code>axis=0</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(pd.concat([df1,df3],axis=<span class="number">1</span>))</span><br></pre></td></tr></table></figure>
+<pre><code>     a    b    c    d    c    d    e    f
+1  0.0  0.0  0.0  0.0  2.0  2.0  2.0  2.0
+2  0.0  0.0  0.0  0.0  2.0  2.0  2.0  2.0
+3  0.0  0.0  0.0  0.0  2.0  2.0  2.0  2.0
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(pd.concat([df1,df2],axis=<span class="number">0</span>))</span><br></pre></td></tr></table></figure>
+<pre><code>     a    b    c    d
+1  0.0  0.0  0.0  0.0
+2  0.0  0.0  0.0  0.0
+3  0.0  0.0  0.0  0.0
+1  1.0  1.0  1.0  1.0
+2  1.0  1.0  1.0  1.0
+3  1.0  1.0  1.0  1.0
+</code></pre><p>但是可以看到上一個data frame中index並不連續，可以用<code>ignore_index = True</code>產生新的index</p>
+<p>可以注意到index由012012變為012345</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(pd.concat([df1,df2],axis=<span class="number">0</span>,ignore_index = <span class="keyword">True</span>))</span><br></pre></td></tr></table></figure>
+<pre><code>     a    b    c    d
+0  0.0  0.0  0.0  0.0
+1  0.0  0.0  0.0  0.0
+2  0.0  0.0  0.0  0.0
+3  1.0  1.0  1.0  1.0
+4  1.0  1.0  1.0  1.0
+5  1.0  1.0  1.0  1.0
+</code></pre><p>還有一個參數是<code>join=&#39;outer&#39;</code>(這是預設的)，另外一個則為<code>join=&#39;inner&#39;</code></p>
+<p>如果是<code>outer</code>，沒有的資料會用<code>NaN</code>替代，使用<code>inner</code>的話，會只保留兩個df共同都有資料的欄位</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(pd.concat([df1,df3],axis=<span class="number">0</span>,join=<span class="string">'outer'</span>))</span><br></pre></td></tr></table></figure>
+<pre><code>     a    b    c    d    e    f
+1  0.0  0.0  0.0  0.0  NaN  NaN
+2  0.0  0.0  0.0  0.0  NaN  NaN
+3  0.0  0.0  0.0  0.0  NaN  NaN
+1  NaN  NaN  2.0  2.0  2.0  2.0
+2  NaN  NaN  2.0  2.0  2.0  2.0
+3  NaN  NaN  2.0  2.0  2.0  2.0
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(pd.concat([df1,df3],axis=<span class="number">0</span>,join=<span class="string">'inner'</span>))</span><br></pre></td></tr></table></figure>
+<pre><code>     c    d
+1  0.0  0.0
+2  0.0  0.0
+3  0.0  0.0
+1  2.0  2.0
+2  2.0  2.0
+3  2.0  2.0
+</code></pre><p><code>join_axes</code>功能，用於水平合併時指定index參考者</p>
+<p>df1的index是123，df4的index是235，來看看參數不同會發生什麼事</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(pd.concat([df1,df4],axis=<span class="number">1</span>, join_axes=[df1.index]))</span><br></pre></td></tr></table></figure>
+<pre><code>     a    b    c    d    c    d    e    f
+1  0.0  0.0  0.0  0.0  NaN  NaN  NaN  NaN
+2  0.0  0.0  0.0  0.0  2.0  2.0  2.0  2.0
+3  0.0  0.0  0.0  0.0  2.0  2.0  2.0  2.0
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(pd.concat([df1,df4],axis=<span class="number">1</span>, join_axes=[df4.index]))</span><br></pre></td></tr></table></figure>
+<pre><code>     a    b    c    d    c    d    e    f
+2  0.0  0.0  0.0  0.0  2.0  2.0  2.0  2.0
+3  0.0  0.0  0.0  0.0  2.0  2.0  2.0  2.0
+5  NaN  NaN  NaN  NaN  2.0  2.0  2.0  2.0
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(pd.concat([df1,df4],axis=<span class="number">1</span>, join_axes=<span class="keyword">None</span>))</span><br></pre></td></tr></table></figure>
+<pre><code>     a    b    c    d    c    d    e    f
+1  0.0  0.0  0.0  0.0  NaN  NaN  NaN  NaN
+2  0.0  0.0  0.0  0.0  2.0  2.0  2.0  2.0
+3  0.0  0.0  0.0  0.0  2.0  2.0  2.0  2.0
+5  NaN  NaN  NaN  NaN  2.0  2.0  2.0  2.0
+</code></pre><p>以上我感覺到python對於index的處理，應該是比R還要嚴謹的</p>
+<h2 id="join系列的實現：merge"><a href="#join系列的實現：merge" class="headerlink" title="join系列的實現：merge"></a>join系列的實現：merge</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">list1=[[<span class="string">'1101'</span>,<span class="string">'1101'</span>,<span class="string">'1101'</span>,<span class="string">'2330'</span>,<span class="string">'2330'</span>,<span class="string">'2330'</span>,<span class="string">'2337'</span>,<span class="string">'2337'</span>,<span class="string">'2337'</span>],</span><br><span class="line">       [<span class="string">'20180101'</span>,<span class="string">'20180102'</span>,<span class="string">'20180103'</span>,<span class="string">'20180101'</span>,<span class="string">'20180102'</span>,<span class="string">'20180103'</span>,<span class="string">'20180101'</span>,<span class="string">'20180102'</span>,<span class="string">'20180103'</span>],</span><br><span class="line">       [<span class="number">10</span>,<span class="number">11</span>,<span class="number">12</span>,<span class="number">100</span>,<span class="number">101</span>,<span class="number">102</span>,<span class="number">201</span>,<span class="number">202</span>,<span class="number">203</span>]]</span><br><span class="line"></span><br><span class="line">list2=[[<span class="string">'1101'</span>,<span class="string">'1101'</span>,<span class="string">'2330'</span>,<span class="string">'2330'</span>,<span class="string">'2337'</span>,<span class="string">'2337'</span>,],</span><br><span class="line">       [<span class="string">'20180101'</span>,<span class="string">'20180103'</span>,<span class="string">'20180101'</span>,<span class="string">'20180103'</span>,<span class="string">'20180101'</span>,<span class="string">'20180103'</span>],</span><br><span class="line">       [<span class="number">200</span>,<span class="number">400</span>,<span class="number">20000</span>,<span class="number">20000</span>,<span class="number">5000</span>,<span class="number">5000</span>]]      </span><br><span class="line">dict1=&#123;<span class="string">'code'</span> : list1[<span class="number">0</span>], <span class="string">'date'</span> : list1[<span class="number">1</span>], <span class="string">'price'</span> : list1[<span class="number">2</span>]&#125;</span><br><span class="line">dict2=&#123;<span class="string">'code'</span> : list2[<span class="number">0</span>], <span class="string">'date'</span> : list2[<span class="number">1</span>], <span class="string">'Volume'</span> : list2[<span class="number">2</span>]&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">df1=pd.DataFrame(dict1)</span><br><span class="line">df2=pd.DataFrame(dict2)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(df1)</span><br></pre></td></tr></table></figure>
+<pre><code>   code      date  price
+0  1101  20180101     10
+1  1101  20180102     11
+2  1101  20180103     12
+3  2330  20180101    100
+4  2330  20180102    101
+5  2330  20180103    102
+6  2337  20180101    201
+7  2337  20180102    202
+8  2337  20180103    203
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(df2)</span><br></pre></td></tr></table></figure>
+<pre><code>   Volume  code      date
+0     200  1101  20180101
+1     400  1101  20180103
+2   20000  2330  20180101
+3   20000  2330  20180103
+4    5000  2337  20180101
+5    5000  2337  20180103
+</code></pre><p>以code以及date來合併，在R是寫成<code>left_join(df1,df2,by=c(&#39;code&#39;=&#39;code&#39;,&#39;date&#39;=date&#39;))</code></p>
+<p>以下用Python來實現</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(pd.merge(df1,df2, on=[<span class="string">'code'</span>,<span class="string">'date'</span>],how=<span class="string">'left'</span>))</span><br></pre></td></tr></table></figure>
+<pre><code>   code      date  price   Volume
+0  1101  20180101     10    200.0
+1  1101  20180102     11      NaN
+2  1101  20180103     12    400.0
+3  2330  20180101    100  20000.0
+4  2330  20180102    101      NaN
+5  2330  20180103    102  20000.0
+6  2337  20180101    201   5000.0
+7  2337  20180102    202      NaN
+8  2337  20180103    203   5000.0
+</code></pre><p>只要改變<code>how=&#39;&#39;</code>就可以改為inner_join、right_join等等…不過我目前也只用到leftjoin</p>
+<p>可以發現R可以把兩個column name不同但是內容相同的column接在一起，merge當然也可以</p>
+<p>以下我們把colname改一下，來試著合併看看</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">dict1=&#123;<span class="string">'code'</span> : list1[<span class="number">0</span>], <span class="string">'date'</span> : list1[<span class="number">1</span>], <span class="string">'price'</span> : list1[<span class="number">2</span>]&#125;</span><br><span class="line">dict2=&#123;<span class="string">'Ticker'</span> : list2[<span class="number">0</span>], <span class="string">'Date'</span> : list2[<span class="number">1</span>], <span class="string">'Volume'</span> : list2[<span class="number">2</span>]&#125;</span><br><span class="line">df1=pd.DataFrame(dict1)</span><br><span class="line">df2=pd.DataFrame(dict2)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(pd.merge(df1, df2, left_on=[<span class="string">'code'</span>,<span class="string">'date'</span>], right_on=[<span class="string">'Ticker'</span>,<span class="string">'Date'</span>],how=<span class="string">'left'</span>))</span><br></pre></td></tr></table></figure>
+<pre><code>   code      date  price      Date Ticker   Volume
+0  1101  20180101     10  20180101   1101    200.0
+1  1101  20180102     11       NaN    NaN      NaN
+2  1101  20180103     12  20180103   1101    400.0
+3  2330  20180101    100  20180101   2330  20000.0
+4  2330  20180102    101       NaN    NaN      NaN
+5  2330  20180103    102  20180103   2330  20000.0
+6  2337  20180101    201  20180101   2337   5000.0
+7  2337  20180102    202       NaN    NaN      NaN
+8  2337  20180103    203  20180103   2337   5000.0
+</code></pre><p>不過R會把第二個df的拿來當merge key的column自動刪掉，Python並不會</p>
 
       
     </div>
@@ -461,9 +566,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/資產配置/" rel="tag"># 資產配置</a>
+            <a href="/tags/程式/" rel="tag"># 程式</a>
           
-            <a href="/tags/Black-Litterman/" rel="tag"># Black Litterman</a>
+            <a href="/tags/Python/" rel="tag"># Python</a>
+          
+            <a href="/tags/Pandas/" rel="tag"># Pandas</a>
           
         </div>
       
@@ -476,8 +583,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/12/markdown解決方案/" rel="next" title="Markdown解決方案">
-                <i class="fa fa-chevron-left"></i> Markdown解決方案
+              <a href="/2018/04/12/Black Litterman 模型理解/" rel="next" title="Blacl Litterman 模型理解">
+                <i class="fa fa-chevron-left"></i> Blacl Litterman 模型理解
               </a>
             
           </div>
@@ -485,10 +592,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/18/Pandas 學習筆記（一）concat與merge/" rel="prev" title="Pandas 學習筆記（一）concat與merge">
-                Pandas 學習筆記（一）concat與merge <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -624,7 +727,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Black-Litterman-模型理解"><span class="nav-number">1.</span> <span class="nav-text">Black Litterman 模型理解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#核心概念"><span class="nav-number">1.1.</span> <span class="nav-text">核心概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#欲最佳化的模型估算式"><span class="nav-number">1.2.</span> <span class="nav-text">欲最佳化的模型估算式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#那實際情況是如何使用的？"><span class="nav-number">1.3.</span> <span class="nav-text">那實際情況是如何使用的？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PQ矩陣舉例"><span class="nav-number">1.4.</span> <span class="nav-text">PQ矩陣舉例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他Notes"><span class="nav-number">1.5.</span> <span class="nav-text">其他Notes</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Pandas-學習筆記（一）concat與merge"><span class="nav-number">1.</span> <span class="nav-text">Pandas 學習筆記（一）concat與merge</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#data-frame整體處理"><span class="nav-number">1.2.</span> <span class="nav-text">data frame整體處理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#cbind、rbind的實現：pd-concat"><span class="nav-number">1.2.1.</span> <span class="nav-text">cbind、rbind的實現：pd.concat</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#join系列的實現：merge"><span class="nav-number">1.3.</span> <span class="nav-text">join系列的實現：merge</span></a></li></ol></li></ol></div>
             
 
           </div>

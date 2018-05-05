@@ -400,15 +400,42 @@
 
       
         
-          <h1 id="ML-Lecture-8-1-“Hello-world”-of-deep-learning-學習筆記"><a href="#ML-Lecture-8-1-“Hello-world”-of-deep-learning-學習筆記" class="headerlink" title="ML Lecture 8-1: “Hello world” of deep learning 學習筆記"></a>ML Lecture 8-1: “Hello world” of deep learning 學習筆記</h1><h2 id="1-Why-Keras-not-Tensorflow"><a href="#1-Why-Keras-not-Tensorflow" class="headerlink" title="1. Why Keras, not Tensorflow?"></a>1. Why Keras, not Tensorflow?</h2><p>Tensorflow是一個框架，非常flexible，你可以想成一個微分器，所以學起來是有一些難度的。</p>
-<p>Keras提供友好且直觀的interface來應用深度學習，但是也有足夠的彈性讓創造自己的NN架構，就好像是疊積木一樣。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/06/ML Lecture 8-1- “Hello world” of deep learning 學習筆記/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
+            <h1 id="ML-Lecture-8-1-“Hello-world”-of-deep-learning-學習筆記"><a href="#ML-Lecture-8-1-“Hello-world”-of-deep-learning-學習筆記" class="headerlink" title="ML Lecture 8-1: “Hello world” of deep learning 學習筆記"></a>ML Lecture 8-1: “Hello world” of deep learning 學習筆記</h1><h2 id="1-Why-Keras-not-Tensorflow"><a href="#1-Why-Keras-not-Tensorflow" class="headerlink" title="1. Why Keras, not Tensorflow ?"></a>1. Why Keras, not Tensorflow ?</h2><p>Tensorflow是一個深度學習框架，非常flexible，你可以想成一個微分器，所以學起來是有一些難度的。</p>
+<p>相較之下，Keras提供友好且直觀的interface來應用深度學習，但是也有足夠的彈性讓創造自己的NN架構，就好像是疊積木一樣。</p>
+<h2 id="2-‘Hello-World-’-of-Keras"><a href="#2-‘Hello-World-’-of-Keras" class="headerlink" title="2. ‘Hello World!’ of Keras"></a>2. ‘Hello World!’ of Keras</h2><ul>
+<li>Step 1 : define a set of function</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">model = Sequential()</span><br><span class="line">model.add( Dense( input_dim = <span class="number">28</span>*<span class="number">28</span>,</span><br><span class="line">                  output_dim = <span class="number">500</span> ) )</span><br><span class="line">model.add( Activation(<span class="string">'sigmoid'</span>) )</span><br><span class="line"><span class="comment">#可以選softplus, softsign, relu, tanh, hard_sigmoid, linear，也可自己寫</span></span><br><span class="line">model.add( Dense( output_dim = <span class="number">500</span> ) )</span><br><span class="line">model.add( Activation(<span class="string">'sigmoid'</span>) )</span><br><span class="line">model.add( Dense( output_dim = <span class="number">10</span> ) )</span><br><span class="line">model.add( Activation(<span class="string">'softmax'</span>) )</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Step 2 : goodness of function</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">model.compile(lost = <span class="string">'categorical_crossentropy'</span>,</span><br><span class="line">              optimizer = <span class="string">'adam'</span>,</span><br><span class="line">              metrics = [<span class="string">'accuracy'</span>]))</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Step 3 : pick the best function</li>
+</ul>
+<p><code>optimizer = &#39;adam&#39;</code>這些都是gradient descent based的方法，可以有：SGD,RMSprop,Adagrad,Adadelta,Adam,Adamax,Nadam</p>
+<p>最後進行訓練：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">model.fit(x_train, y_train, batch_size = <span class="number">100</span>, nb_epocj = <span class="number">20</span>)</span><br></pre></td></tr></table></figure>
+<p>假設有1000個樣本，每個樣本是28*28，dimension就是1000*28*28</p>
+<h2 id="3-mini-batch"><a href="#3-mini-batch" class="headerlink" title="3. mini-batch"></a>3. mini-batch</h2><p>我們並不會去minimize total loss，這樣太耗費效能與時間了，於是就誕生了mini-batch這個方法，每一個batch都是樣本中隨機挑選的。</p>
+<p><img src="https://i.imgur.com/9B9hi5t.jpg" alt="img"></p>
+<p>步驟為：</p>
+<ul>
+<li>隨機初始NN的參數</li>
+<li>挑第一個batch ${L}’={l}^{1}+{l}^{31}+…$並更新一次參數</li>
+<li>挑第二個batch ${L}’’={l}^{2}+{l}^{16}+…$並更新一次參數</li>
+<li>直到所有mini-batch都被挑出來了</li>
+</ul>
+<p>以上過程就稱為1個epoch。</p>
+<p>如果batch＿size設為1的話，有stochastic gradient descent的意涵，天下武功唯快不破。但是這樣的話為什麼不直接用SGD，而是用mini-batch呢？李老師說這是實作的議題。</p>
+<p><img src="https://i.imgur.com/Xo9TgYZ.jpg" alt="img"></p>
+<p>我們原本預期SGD可以比較快，亦即能更新更多次參數，但事後來看，size為1進行1個epoch反而要花更長時間，而且batch size為10反而更穩定。那為什麼batch size設比較大的時候反而比較快？歸功於平行運算，batch中每一個可以同時計算。</p>
+<p>那我們可以把batch開到最大嗎？硬體終究有限制，撇開硬體的話，在訓練的時後很容易馬上陷入local minima裡面。（等於沒有隨機性的好處）</p>
+<h2 id="4-evaulate"><a href="#4-evaulate" class="headerlink" title="4. evaulate"></a>4. evaulate</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#case1</span></span><br><span class="line">score = model.evalute(x_test, y_test)</span><br><span class="line">print(<span class="string">'Total lose on Testing Set:'</span>, score[<span class="number">0</span>])</span><br><span class="line">print(<span class="string">'Accuracy of Testing Set:'</span>, score[<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment">#case2</span></span><br><span class="line">result = model.predict(x_test)</span><br></pre></td></tr></table></figure>
+<p>整個模型的運用就像熟悉的朋友scikit-learn一樣。</p>
+
+          
         
       
     </div>

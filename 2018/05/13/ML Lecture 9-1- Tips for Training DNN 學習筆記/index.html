@@ -112,7 +112,7 @@
 <meta property="og:image" content="https://i.imgur.com/OyxHymb.jpg">
 <meta property="og:image" content="https://i.imgur.com/gO9u7zw.jpg">
 <meta property="og:image" content="https://i.imgur.com/AndsHB3.jpg">
-<meta property="og:updated_time" content="2018-05-12T18:20:43.000Z">
+<meta property="og:updated_time" content="2018-05-12T18:27:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ML Lecture 9-1- Tips for Training DNN 學習筆記">
 <meta name="twitter:description" content="img{     width: 60%;     padding-left: 20%; }   ML Lecture 9-1- Tips for Training DNN這一次的課程介紹許多讓NN表現更好的手法  改變激發函數 改變參數更新的演算法 Early Stopping 正則化 Dropout  跟其他超參數比較少的模型（決策樹之類的）不一樣的地方是，訓練NN時會先評估training">
@@ -485,7 +485,7 @@ img{
 <p><img src="https://i.imgur.com/ILkozSR.png" alt="img"></p>
 <p>如果有動能的話，碰到plateau，會依循動能繼續下降下去，甚至碰到山谷的時候，還是能依照慣性一躍而上。</p>
 <p><img src="https://i.imgur.com/aMBqtRe.jpg" alt="img"></p>
-<p>這個概念可以從幾何意義來分析，藍色是我們決定要走的方向，在 ${\theta}<em>{2}$ 的地方，紅色虛線是這次gradient所決定要走的向量（乘上 $\eta$ ），綠色虛線是 ${\theta}</em>{1}$ 走的向量（慣性，乘上 $\lambda$ ），兩個相加起來之後決定出 ${\theta}_{2}$ 這個方向，並依此規則下去。</p>
+<p>這個概念可以從幾何意義來分析，藍色是我們決定要走的方向，紅色虛線是原本gradient向量決定出的方向，綠色虛線是 ${\theta}<em>{1}$ 走的向量（慣性），兩個相加起來之後決定出${\theta}</em>{2}$，並依此規則下去。</p>
 <p>以下放上比較科普的版本。</p>
 <p><img src="https://i.imgur.com/z8KnNfo.png" alt="img"></p>
 <p>那RMSprop加上Momentum，就是Adam。</p>

@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="機器學習,Keras,類神經網路," />
+  <meta name="keywords" content="機器學習,類神經網路," />
 
 
 
@@ -79,21 +79,43 @@
 
 
 
-<meta name="description" content="ML Lecture 8-1: “Hello world” of deep learning 學習筆記1. Why Keras, not Tensorflow ?Tensorflow是一個深度學習框架，非常flexible，你可以想成一個微分器，所以學起來是有一些難度的。 相較之下，Keras提供友好且直觀的interface來應用深度學習，但是也有足夠的彈性讓創造自己的NN架構，就好像是疊積木一">
-<meta name="keywords" content="機器學習,Keras,類神經網路">
+<meta name="description" content="img{     width: 60%;     padding-left: 20%; }   ML Lecture 9-1- Tips for Training DNN這一次的課程介紹許多讓NN表現更好的手法  改變激發函數 改變參數更新的演算法 Early Stopping 正則化 Dropout  跟其他超參數比較少的模型（決策樹）不一樣的地方是，訓練NN時會先評估training set">
+<meta name="keywords" content="機器學習,類神經網路">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ML Lecture 8-1: “Hello world” of deep learning 學習筆記">
-<meta property="og:url" content="http://yoursite.com/2018/05/06/ML Lecture 8-1- “Hello world” of deep learning 學習筆記/index.html">
+<meta property="og:title" content="ML Lecture 9-1- Tips for Training DNN 學習筆記">
+<meta property="og:url" content="http://yoursite.com/2018/05/13/ML Lecture 9-1- Tips for Training DNN 學習筆記/index.html">
 <meta property="og:site_name" content="哈瑪星人的程式銀河">
-<meta property="og:description" content="ML Lecture 8-1: “Hello world” of deep learning 學習筆記1. Why Keras, not Tensorflow ?Tensorflow是一個深度學習框架，非常flexible，你可以想成一個微分器，所以學起來是有一些難度的。 相較之下，Keras提供友好且直觀的interface來應用深度學習，但是也有足夠的彈性讓創造自己的NN架構，就好像是疊積木一">
+<meta property="og:description" content="img{     width: 60%;     padding-left: 20%; }   ML Lecture 9-1- Tips for Training DNN這一次的課程介紹許多讓NN表現更好的手法  改變激發函數 改變參數更新的演算法 Early Stopping 正則化 Dropout  跟其他超參數比較少的模型（決策樹）不一樣的地方是，訓練NN時會先評估training set">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://i.imgur.com/9B9hi5t.jpg">
-<meta property="og:image" content="https://i.imgur.com/Xo9TgYZ.jpg">
-<meta property="og:updated_time" content="2018-05-05T17:10:06.000Z">
+<meta property="og:image" content="https://i.imgur.com/hw8NhAL.png">
+<meta property="og:image" content="https://i.imgur.com/Yrugq19.png">
+<meta property="og:image" content="https://i.imgur.com/v3TkeTg.png">
+<meta property="og:image" content="https://i.imgur.com/LpngRv9.png">
+<meta property="og:image" content="https://i.imgur.com/cfmutDd.png">
+<meta property="og:image" content="https://i.imgur.com/6TYtW0a.jpg">
+<meta property="og:image" content="https://i.imgur.com/7YW3vPK.png">
+<meta property="og:image" content="https://i.imgur.com/Aih7KhP.png">
+<meta property="og:image" content="https://i.imgur.com/7JbGMWA.png">
+<meta property="og:image" content="https://i.imgur.com/wyism5i.png">
+<meta property="og:image" content="https://i.imgur.com/ILkozSR.png">
+<meta property="og:image" content="https://i.imgur.com/aMBqtRe.jpg">
+<meta property="og:image" content="https://i.imgur.com/z8KnNfo.png">
+<meta property="og:image" content="https://i.imgur.com/CVZmIbO.jpg">
+<meta property="og:image" content="https://i.imgur.com/RRhpk8k.png">
+<meta property="og:image" content="https://i.imgur.com/AAUHEV4.jpg">
+<meta property="og:image" content="https://i.imgur.com/SEM7aBo.png">
+<meta property="og:image" content="https://i.imgur.com/TZHC4HU.jpg">
+<meta property="og:image" content="https://i.imgur.com/BOr7Ucw.jpg">
+<meta property="og:image" content="https://i.imgur.com/e1YNkve.jpg">
+<meta property="og:image" content="https://i.imgur.com/3EI5wYH.jpg">
+<meta property="og:image" content="https://i.imgur.com/OyxHymb.jpg">
+<meta property="og:image" content="https://i.imgur.com/gO9u7zw.jpg">
+<meta property="og:image" content="https://i.imgur.com/AndsHB3.jpg">
+<meta property="og:updated_time" content="2018-05-12T17:24:55.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ML Lecture 8-1: “Hello world” of deep learning 學習筆記">
-<meta name="twitter:description" content="ML Lecture 8-1: “Hello world” of deep learning 學習筆記1. Why Keras, not Tensorflow ?Tensorflow是一個深度學習框架，非常flexible，你可以想成一個微分器，所以學起來是有一些難度的。 相較之下，Keras提供友好且直觀的interface來應用深度學習，但是也有足夠的彈性讓創造自己的NN架構，就好像是疊積木一">
-<meta name="twitter:image" content="https://i.imgur.com/9B9hi5t.jpg">
+<meta name="twitter:title" content="ML Lecture 9-1- Tips for Training DNN 學習筆記">
+<meta name="twitter:description" content="img{     width: 60%;     padding-left: 20%; }   ML Lecture 9-1- Tips for Training DNN這一次的課程介紹許多讓NN表現更好的手法  改變激發函數 改變參數更新的演算法 Early Stopping 正則化 Dropout  跟其他超參數比較少的模型（決策樹）不一樣的地方是，訓練NN時會先評估training set">
+<meta name="twitter:image" content="https://i.imgur.com/hw8NhAL.png">
 
 
 
@@ -123,13 +145,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/06/ML Lecture 8-1- “Hello world” of deep learning 學習筆記/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/13/ML Lecture 9-1- Tips for Training DNN 學習筆記/"/>
 
 
 
 
 
-  <title>ML Lecture 8-1: “Hello world” of deep learning 學習筆記 | 哈瑪星人的程式銀河</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>ML Lecture 9-1- Tips for Training DNN 學習筆記 | 哈瑪星人的程式銀河</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -300,7 +322,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/06/ML Lecture 8-1- “Hello world” of deep learning 學習筆記/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/13/ML Lecture 9-1- Tips for Training DNN 學習筆記/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Alex Lau">
@@ -317,7 +339,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">ML Lecture 8-1: “Hello world” of deep learning 學習筆記</h1>
+          <h1 class="post-title" itemprop="name headline">ML Lecture 9-1- Tips for Training DNN 學習筆記</h1>
         
 
         <div class="post-meta">
@@ -329,8 +351,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-06T00:52:16+08:00">
-                2018-05-06
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-13T01:24:16+08:00">
+                2018-05-13
               </time>
             
 
@@ -400,40 +422,105 @@
       
 
       
-        <h1 id="ML-Lecture-8-1-“Hello-world”-of-deep-learning-學習筆記"><a href="#ML-Lecture-8-1-“Hello-world”-of-deep-learning-學習筆記" class="headerlink" title="ML Lecture 8-1: “Hello world” of deep learning 學習筆記"></a>ML Lecture 8-1: “Hello world” of deep learning 學習筆記</h1><h2 id="1-Why-Keras-not-Tensorflow"><a href="#1-Why-Keras-not-Tensorflow" class="headerlink" title="1. Why Keras, not Tensorflow ?"></a>1. Why Keras, not Tensorflow ?</h2><p>Tensorflow是一個深度學習框架，非常flexible，你可以想成一個微分器，所以學起來是有一些難度的。</p>
-<p>相較之下，Keras提供友好且直觀的interface來應用深度學習，但是也有足夠的彈性讓創造自己的NN架構，就好像是疊積木一樣。</p>
+        <style>
+img{
+    width: 60%;
+    padding-left: 20%;
+}
+</style>
+
+<h1 id="ML-Lecture-9-1-Tips-for-Training-DNN"><a href="#ML-Lecture-9-1-Tips-for-Training-DNN" class="headerlink" title="ML Lecture 9-1- Tips for Training DNN"></a>ML Lecture 9-1- Tips for Training DNN</h1><p>這一次的課程介紹許多讓NN表現更好的手法</p>
+<ul>
+<li>改變激發函數</li>
+<li>改變參數更新的演算法</li>
+<li>Early Stopping</li>
+<li>正則化</li>
+<li>Dropout</li>
+</ul>
+<p>跟其他超參數比較少的模型（決策樹）不一樣的地方是，訓練NN時會先評估training set上的結果好不好，因為參數那麼多訓練很難一次到位，最後再看看在testing set上的表現好不好，如果在testing set上反而不好那就是overfitting了！</p>
 <a id="more"></a>
-<h2 id="2-‘Hello-World-’-of-Keras"><a href="#2-‘Hello-World-’-of-Keras" class="headerlink" title="2. ‘Hello World!’ of Keras"></a>2. ‘Hello World!’ of Keras</h2><ul>
-<li>Step 1 : define a set of function</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">model = Sequential()</span><br><span class="line">model.add( Dense( input_dim = <span class="number">28</span>*<span class="number">28</span>,</span><br><span class="line">                  output_dim = <span class="number">500</span> ) )</span><br><span class="line">model.add( Activation(<span class="string">'sigmoid'</span>) )</span><br><span class="line"><span class="comment">#可以選softplus, softsign, relu, tanh, hard_sigmoid, linear，也可自己寫</span></span><br><span class="line">model.add( Dense( output_dim = <span class="number">500</span> ) )</span><br><span class="line">model.add( Activation(<span class="string">'sigmoid'</span>) )</span><br><span class="line">model.add( Dense( output_dim = <span class="number">10</span> ) )</span><br><span class="line">model.add( Activation(<span class="string">'softmax'</span>) )</span><br></pre></td></tr></table></figure>
+<h2 id="Do-not-always-blame-overfitting"><a href="#Do-not-always-blame-overfitting" class="headerlink" title="Do not always blame overfitting"></a>Do not always blame overfitting</h2><p>有個圖像辨識的例子，在testing data上56-layer比20-layer的表現還要不好，這樣就是overfitting嗎？後來發現在training data上，56-layer的表現就已經比20-layer還要差了，因爲NN有太多因素可以影響訓練結果。</p>
+<p>不同的方法也需要對症下藥，如果今天是testing set表現不好，用dropout或許可以讓結果變好，但是如果已經在train set表現不好，用dropout只會越用越糟而已。</p>
+<h2 id="Training-Data表現不好解決法"><a href="#Training-Data表現不好解決法" class="headerlink" title="Training Data表現不好解決法"></a>Training Data表現不好解決法</h2><h3 id="新的激發函數"><a href="#新的激發函數" class="headerlink" title="新的激發函數"></a>新的激發函數</h3><p>用Sigmoid的話，靠近input的地方梯度比較小，學得很慢；靠近output的梯度比較大，學得比較快，這個直覺意涵可以可由神經網路的foward pass去思考。</p>
+<p><img src="https://i.imgur.com/hw8NhAL.png" alt="img"></p>
+<p>直觀來說，在Sigmoid中，很大的input之變化，可能讓output的變化只有一點點，可以說變化是會衰減的，經過越多層，這個衰減越多，但ReLU是很不錯的解決方法。</p>
+<p>ReLU的好處有：</p>
 <ul>
-<li>Step 2 : goodness of function</li>
+<li>計算快</li>
+<li>論文指出跟生物上的觀察類似</li>
+<li>無窮多不同bias的Sigmoid疊加起來近似於ReLu</li>
+<li>解決梯度消失問題</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">model.compile(lost = <span class="string">'categorical_crossentropy'</span>,</span><br><span class="line">              optimizer = <span class="string">'adam'</span>,</span><br><span class="line">              metrics = [<span class="string">'accuracy'</span>]))</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.imgur.com/Yrugq19.png" alt="img"></p>
+<p>通過ReLU後，輸出的值是原本的值，不然就是0，所以如果把0的節點拿掉，很像是一個瘦長的線性模型。</p>
+<p><img src="https://i.imgur.com/v3TkeTg.png" alt="img"></p>
+<p>這個時候就不會有梯度消失的問題，因為較大的輸入值，仍有較大的輸出值，不會只被壓縮到0到1之間，這時問題來了，這樣不就是線性模型嗎？我們用NN不就是要解決非線性問題嗎？</p>
+<p>影片與底下留言說：「operation region是指被activate的那些neuron(就是沒被刪掉的neuron)，不同的input可能就會是不同的neuron被activate，就會有不同的operation region，所以整體還是nonlinear。」</p>
+<p>我的理解是，各個節點隨著input的不同，就可能會有不一樣的節點不小於0，就好像有不同的大門被「開啟」，換句話說，不一樣的input可能會產生不一樣的支線任務。</p>
+<p>再來是ReLU有一點不可微怎麼辦？實作上不太可能input為0（不可微的那點），所以就讓它去吧！</p>
+<p>ReLU也發展其他變形：</p>
+<p><img src="https://i.imgur.com/LpngRv9.png" alt="img"></p>
+<p>甚至出現Maxout這樣的激發函數，自己先決定要幾個數為一個group，然後取最大值進入下一個節點。</p>
+<p><img src="https://i.imgur.com/cfmutDd.png" alt="img"></p>
+<p>但是Maxout這樣的模式，是有辦法模仿出ReLU的，不多說直接上圖吧！</p>
+<p><img src="https://i.imgur.com/6TYtW0a.jpg" alt="img"></p>
+<p>左邊是ReLU，右邊是Maxout某一個情況，左右是等價的，亦即Maxout是可以創造（或學習）ReLU的效果，不得不說李老師的教學真的很直觀。突然發覺，哇，ReLU是類神經的option買權耶…</p>
+<p>不僅如此，Maxout可以創造出很多不同形狀的激發函數，因為它的形狀是根據「權重」得來的，所以實質上這是learnable activation function（太酷了）！</p>
+<p>假如3個element一個group，可以是一個凹的激發函數！但是max不可微，我們該怎麼訓練？</p>
+<p><img src="https://i.imgur.com/7YW3vPK.png" alt="img"></p>
+<p>這個問題跟ReLU很像，給定某一個樣本，紅框是max值，它的NN結構就像這樣：</p>
+<p><img src="https://i.imgur.com/Aih7KhP.png" alt="img"></p>
+<p>這樣來看又是一個瘦長線性網路，再去做backpropagation，去train連到比較大的element的權重，但是其他的權重怎麼辦？就像剛剛的思考一樣，不同樣本會有不同的NN結構，也會開啟到不同的「大門」，這樣大致來說每個權重都可以被訓練到的。</p>
+<h3 id="Adaptive-learning-rate"><a href="#Adaptive-learning-rate" class="headerlink" title="Adaptive learning rate"></a>Adaptive learning rate</h3><p>之前課程有提到Adagrad這樣的梯度下降法</p>
+<p><img src="https://i.imgur.com/7JbGMWA.png" alt="img"></p>
+<p>先對以前得到的梯度做平方和，直觀意義是如果第t次以前的梯度都比較小，這樣就會得到比較大的learning rate，以免梯度下降過於緩慢，反之，如果以前的梯度都比較大，他就會讓learning收斂得比較小，以免跳得過快。這個方法另外一個意義是用第一導數去估計第二導數。</p>
+<p>在上一個圖片，某些方向比較平坦，就是一直平坦下去，但是如果error surface是彎月型的，就算是同一個方向，有些區域很陡峭，有些區域又很平坦，那該怎麼自適應呢？於是有了RMSProp！</p>
+<p><img src="https://i.imgur.com/wyism5i.png" alt="img"></p>
+<p>這個想法實在很精妙，沒有paper，只有出現在Hinton大神的線上課程。直觀上是以前的梯度都會透過遞迴過程影響現在，但是越到後面，以往梯度的影響力會逐漸變弱，$\alpha$則可以調整是否要給現在的梯度更大的權重。腦袋一拍，這跟EMA（指數平滑平均）的精神真的很像——現在的值會比較重要，故給予比較大的權重。</p>
+<p>接下來的課題是，大家都很怕訓練過程中卡在local minima出不去，或是碰到plateau或是鞍點這些導數幾乎為0的地方。但是2007年有位學者（待補充）提出一個很特別的想法：「其實error surface沒有太多local minima，因為你要在每一個維度都要剛好卡在local minima才有問題，network的參數可以到上千個，每一個參數都剛好碰上local minima，這機會真的不大。」</p>
+<p>不過我們可以從真實世界得到一些解決local minima的問題——momentum（慣性）。</p>
+<p><img src="https://i.imgur.com/ILkozSR.png" alt="img"></p>
+<p>如果有動能的話，碰到plateau，會依循動能繼續下降下去，甚至碰到山谷的時候，還是能依照慣性一躍而上。</p>
+<p><img src="https://i.imgur.com/aMBqtRe.jpg" alt="img"></p>
+<p>從幾何學來看的話，藍色是我們決定要走的方向，看到在${\theta}_{1}$的地方，紅色虛線是這次gradient所決定要走的向量（乘上$\eta$），綠色虛線是上次走的向量（慣性，乘上$\lambda$），兩個相加起來之後決定下一次梯度下降的方向，並依此規則下去。以下放上比較科普的版本。</p>
+<p><img src="https://i.imgur.com/z8KnNfo.png" alt="img"></p>
+<p>那RMSprop加上Momentum，就是Adam！</p>
+<p><img src="https://i.imgur.com/CVZmIbO.jpg" alt="img"></p>
+<h2 id="Testing-or-Validation-Data表現不好解決法"><a href="#Testing-or-Validation-Data表現不好解決法" class="headerlink" title="Testing(or Validation) Data表現不好解決法"></a>Testing(or Validation) Data表現不好解決法</h2><h3 id="Early-Stopping"><a href="#Early-Stopping" class="headerlink" title="Early Stopping"></a>Early Stopping</h3><p>我們知道Testing set和 Training set的分配不一定一樣，如果訓練集train得過多，可能導致過擬合的問題，那如果我們停在一個最佳點（Testing data的error正要上升時），不是皆大歡喜嗎？</p>
+<p><img src="https://i.imgur.com/RRhpk8k.png" alt="img"></p>
+<p>但我們不會知道testing set，所以會在已有的training set切出一組資料不加入訓練，而是作為驗證（Validation）。</p>
+<h3 id="Regularization"><a href="#Regularization" class="headerlink" title="Regularization"></a>Regularization</h3><p>正則項是在損失函數中加入L1或是L2範數，L1範數用絕對值衡量，L2範數用平方和衡量，通常不考慮bias項。正則項可以讓模型更加平滑，也可以減少overfitting。</p>
+<p><img src="https://i.imgur.com/AAUHEV4.jpg" alt="img"></p>
+<p><img src="https://i.imgur.com/SEM7aBo.png" alt="img"></p>
+<p>把梯度結合律一下，每一次更新參數都會先直接把權重乘上一個小於1的數，讓權重更接近0，但事實上不會每一個數都接近0，因為會跟$\eta \frac{\partial L}{\partial w}$這一項取得平衡</p>
+<p>但是影片中李老師提到，正則項在NN的重要性沒有比在SVM中來得高（幫助沒有那麼顯著）。可能的原因是從early stopping中，可以知道什麼時候更新參數該停下來，而且NN的初始參數都是從很小的值開始，梯度下降讓參數離0越來越遠。換個角度來看，正則項的目的是要讓參數不要離0太遠，似乎跟不要更新那麼多次參數，是有相同作用的。</p>
+<p>但是SVM不一樣，它沒有early stopping這回事，因為它是一次到位就解出那個最好的結果，所以需要正則化加入模型控制複雜度。</p>
+<p>再來我們可以有L1正則化：</p>
+<p><img src="https://i.imgur.com/TZHC4HU.jpg" alt="img"></p>
+<p>絕對值怎麼微分呢？權重是負的就是-1，反之。再來把梯度分析一下，有L1的梯度每更新一次參數都會先減掉一個固定的值。</p>
+<p>假設有L1正則化後，每次更新就會不分青紅皂白先把權重減1，L2則會乘上0.9。如果有某個權重是1000，有L2的梯度更新一次後就會先變成900，相當於減去100，但是有L1的梯度只會變成999；但是但是！如果權重是1，做一次有L2的梯度下降，就會變成0.9，做一次有L1的梯度更新則會直接變成0。由此可以看出L2正則可以讓參數更「平均、平滑」一點，但是L1有能力直接把比較小的權重變成0，但是比較大的權重還是比較大，讓整個模型更sparse（稀疏）。</p>
+<h3 id="Dropout"><a href="#Dropout" class="headerlink" title="Dropout"></a>Dropout</h3><p>在尾聲介紹的是Dropout，這個想法實在也是很精妙，以下先講解如何做的，再來理解其背後的意義。</p>
+<p><img src="https://i.imgur.com/BOr7Ucw.jpg" alt="img"></p>
+<p>在traing的時候，每一個mini-batch，會從完整網路隨機捨去p%的neuron，所以整體來看結構變得比較瘦長的，並用這個結構來更新參數，到下一個mini-batch的時候，完整的網路再隨機捨去一次，再進行一次參數更新，這樣來看，每一次更新參數的時候，NN結構都是不太一樣的。</p>
+<p>使用dropout的時候，在training set的效果是會變差的，因為計算誤差的時候有些neuron是不見的，但是dropout是可以樣本外的結果變好的，所以如果training的效果已經不好的話，做dropout反而是沒有用的，因為連training set的結果都不好，代表問題不是overfitting。</p>
+<p><img src="https://i.imgur.com/e1YNkve.jpg" alt="img"></p>
+<p>訓練好的模型運用在testing (or validation)時，有幾點要注意</p>
 <ul>
-<li>Step 3 : pick the best function</li>
+<li>用完整的網路</li>
+<li>如果每次更新參數都dropout p%，每個權重要乘上(1-p)%</li>
 </ul>
-<p><code>optimizer = &#39;adam&#39;</code>這些都是gradient descent based的方法，可以有：SGD,RMSprop,Adagrad,Adadelta,Adam,Adamax,Nadam</p>
-<p>最後進行訓練：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">model.fit(x_train, y_train, batch_size = <span class="number">100</span>, nb_epocj = <span class="number">20</span>)</span><br></pre></td></tr></table></figure>
-<p>假設有1000個樣本，每個樣本是28*28，dimension就是1000*28*28</p>
-<h2 id="3-Mini-batch"><a href="#3-Mini-batch" class="headerlink" title="3. Mini-batch"></a>3. Mini-batch</h2><p>我們並不會去minimize total loss，這樣太耗費效能與時間了，於是就誕生了mini-batch這個方法，每一個batch都是樣本中隨機挑選的。</p>
-<p><img src="https://i.imgur.com/9B9hi5t.jpg" alt="img"></p>
-<p>步驟為：</p>
-<ul>
-<li>隨機初始NN的參數</li>
-<li>挑第一個batch ${L}’={l}^{1}+{l}^{31}+…$並更新一次參數</li>
-<li>挑第二個batch ${L}’’={l}^{2}+{l}^{16}+…$並更新一次參數</li>
-<li>直到所有mini-batch都被挑出來了</li>
-</ul>
-<p>以上過程就稱為1個epoch。</p>
-<p>如果batch＿size設為1的話，有stochastic gradient descent的意涵，天下武功唯快不破。但是這樣的話為什麼不直接用SGD，而是用mini-batch呢？李老師說這是實作的議題。</p>
-<p><img src="https://i.imgur.com/Xo9TgYZ.jpg" alt="img"></p>
-<p>我們原本預期SGD可以比較快，亦即能更新更多次參數，但事後來看，size為1進行1個epoch反而要花更長時間，而且batch size為10反而更穩定。那為什麼batch size設比較大的時候反而比較快？歸功於平行運算，batch中每一個可以同時計算。</p>
-<p>那我們可以把batch開到最大嗎？硬體終究有限制，撇開硬體的話，在訓練的時後很容易馬上陷入local minima裡面。（等於沒有隨機性的好處）</p>
-<h2 id="4-Evaluate"><a href="#4-Evaluate" class="headerlink" title="4. Evaluate"></a>4. Evaluate</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#case1</span></span><br><span class="line">score = model.evalute(x_test, y_test)</span><br><span class="line">print(<span class="string">'Total lose on Testing Set:'</span>, score[<span class="number">0</span>])</span><br><span class="line">print(<span class="string">'Accuracy of Testing Set:'</span>, score[<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment">#case2</span></span><br><span class="line">result = model.predict(x_test)</span><br></pre></td></tr></table></figure>
-<p>整個模型的運用就像熟悉的朋友scikit-learn一樣。</p>
+<p><img src="https://i.imgur.com/3EI5wYH.jpg" alt="img"></p>
+<p>為什麼要rescale?假設今天我們用w1、w2、w3、w4這一組權重，input是(5,4,8,7)，簡單給定正確答案（Label、Y）是10。某次訓練只用w1、w3，學到了$0+0.4\times5+1\times 8=10$，再來用w2、w4學到$-1+1\times4+1\times7=10$，但是如果w1、w2、w3、w4全部結合在一起的話，就會變成20啊，所以還要把每個權重都乘回0.5。</p>
+<p>就好像訓練參數的時候都比較少組員，每個人要多出一點力才能達到正確的力道，但是訓練完實際用模型的時候，大家都回來一起出力啦，每個人要少出一點力，不然力道會太過猛烈。</p>
+<p>就其背後意義，dropout的精神就像ensemble，但又不完全是。ensemble是各別獨立的模型再合在一起投票。不過dropout則是每次都拿不一樣的結構和樣本（mini-batch）再訓練模型，最後再融合在一起，也可以說是一種ensemble的終極形式。</p>
+<p><img src="https://i.imgur.com/OyxHymb.jpg" alt="img"></p>
+<p>如果是普通的ensemble，可能是把訓練集分成10份，再用這10份去train不同結構的NN，最後將輸出平均。</p>
+<p>但實際上這樣可能會有樣本太少的問題，在dropout或許是不用擔心的，因為這次mini batch可能更新了w1，在下次mini-batch時，w1很幸運的沒有被捨棄掉，被更新的參數的w1還是被保留著。（換句話說，一個權重可能可以被很多mini-batch訓練到）</p>
+<p><img src="https://i.imgur.com/gO9u7zw.jpg" alt="img"></p>
+<p>在ensemble中，會把testing set或validation set丟入這一大把不同結構的模型，再把結果平均起來，但是這樣做實在太耗效能了，也太多個nn。神奇的是，把dropout訓練後的參數全部拼回完整的nn，並把每個參數乘上(1-p)%，跟ensemble的平均法，是不可思議地接近等效。</p>
+<p><img src="https://i.imgur.com/AndsHB3.jpg" alt="img"></p>
+<p>在一個簡單線性的NN作為範例，把左邊四個網路平均起來（ensemble），會跟右邊（dropout後結合）是一樣的，但是這只有在linear的時候才會等價，如果是sigmoid，就不會太相等了。</p>
+<p>所以有些文獻也發現在Maxout或ReLU這些比較接近線性的NN，使用dropout提升的效果會比Sigmoid還要好！</p>
 
       
     </div>
@@ -453,8 +540,6 @@
           
             <a href="/tags/機器學習/" rel="tag"># 機器學習</a>
           
-            <a href="/tags/Keras/" rel="tag"># Keras</a>
-          
             <a href="/tags/類神經網路/" rel="tag"># 類神經網路</a>
           
         </div>
@@ -468,8 +553,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/22/殖利率、PEG、PE策略簡易回測/" rel="next" title="殖利率、PEG、PE策略簡易回測">
-                <i class="fa fa-chevron-left"></i> 殖利率、PEG、PE策略簡易回測
+              <a href="/2018/05/06/ML Lecture 8-1- “Hello world” of deep learning 學習筆記/" rel="next" title="ML Lecture 8-1: “Hello world” of deep learning 學習筆記">
+                <i class="fa fa-chevron-left"></i> ML Lecture 8-1: “Hello world” of deep learning 學習筆記
               </a>
             
           </div>
@@ -477,10 +562,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/05/13/ML Lecture 9-1- Tips for Training DNN 學習筆記/" rel="prev" title="ML Lecture 9-1- Tips for Training DNN 學習筆記">
-                ML Lecture 9-1- Tips for Training DNN 學習筆記 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -616,7 +697,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ML-Lecture-8-1-“Hello-world”-of-deep-learning-學習筆記"><span class="nav-number">1.</span> <span class="nav-text">ML Lecture 8-1: “Hello world” of deep learning 學習筆記</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Why-Keras-not-Tensorflow"><span class="nav-number">1.1.</span> <span class="nav-text">1. Why Keras, not Tensorflow ?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-‘Hello-World-’-of-Keras"><span class="nav-number">1.2.</span> <span class="nav-text">2. ‘Hello World!’ of Keras</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Mini-batch"><span class="nav-number">1.3.</span> <span class="nav-text">3. Mini-batch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Evaluate"><span class="nav-number">1.4.</span> <span class="nav-text">4. Evaluate</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ML-Lecture-9-1-Tips-for-Training-DNN"><span class="nav-number">1.</span> <span class="nav-text">ML Lecture 9-1- Tips for Training DNN</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Do-not-always-blame-overfitting"><span class="nav-number">1.1.</span> <span class="nav-text">Do not always blame overfitting</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Training-Data表現不好解決法"><span class="nav-number">1.2.</span> <span class="nav-text">Training Data表現不好解決法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#新的激發函數"><span class="nav-number">1.2.1.</span> <span class="nav-text">新的激發函數</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Adaptive-learning-rate"><span class="nav-number">1.2.2.</span> <span class="nav-text">Adaptive learning rate</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Testing-or-Validation-Data表現不好解決法"><span class="nav-number">1.3.</span> <span class="nav-text">Testing(or Validation) Data表現不好解決法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Early-Stopping"><span class="nav-number">1.3.1.</span> <span class="nav-text">Early Stopping</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Regularization"><span class="nav-number">1.3.2.</span> <span class="nav-text">Regularization</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Dropout"><span class="nav-number">1.3.3.</span> <span class="nav-text">Dropout</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

@@ -416,15 +416,15 @@ img{
 }
 </style>
 
-<h1 id="ML-Lecture-9-1-Tips-for-Training-DNN"><a href="#ML-Lecture-9-1-Tips-for-Training-DNN" class="headerlink" title="ML Lecture 9-1- Tips for Training DNN"></a>ML Lecture 9-1- Tips for Training DNN</h1><p>這一次的課程介紹許多讓NN表現更好的手法</p>
+<h1 id="ML-Lecture-9-1-Tips-for-Training-DNN"><a href="#ML-Lecture-9-1-Tips-for-Training-DNN" class="headerlink" title="ML Lecture 9-1- Tips for Training DNN"></a>ML Lecture 9-1- Tips for Training DNN</h1><p>這一次的課程介紹許多讓類神經網路表現更好的手法</p>
 <ul>
 <li>改變激發函數</li>
 <li>改變參數更新的演算法</li>
-<li>Early Stopping</li>
+<li>early stopping</li>
 <li>正則化</li>
-<li>Dropout</li>
+<li>dropout</li>
 </ul>
-<p>跟其他超參數比較少的模型（決策樹之類的）不一樣的地方是，訓練NN時會先評估training set上的結果好不好，最後再檢視在testing set上的表現如何（因為參數那麼多訓練很難一次到位），如果在testing set上反而不好那就是overfitting了。</p>
+<p>SVM、決策樹這種超參數比較少的模型跟NN有些不同，訓練NN時會先評估training set上的結果，再檢視testing set上的表現，因為參數那麼多訓練很難一次到位。如果training結果好，但是testing反而不好，就是overfitting了。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/05/13/ML Lecture 9-1- Tips for Training DNN 學習筆記/#more" rel="contents">
